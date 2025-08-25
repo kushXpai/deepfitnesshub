@@ -17,8 +17,7 @@ export function getPool(): mysql.Pool {
       waitForConnections: true,
       connectionLimit: 10,
       queueLimit: 0,
-      // If Hostinger requires TLS, uncomment:
-      // ssl: { rejectUnauthorized: true },
+      ssl: { rejectUnauthorized: false },
     });
   }
   return global._mysqlPool;
