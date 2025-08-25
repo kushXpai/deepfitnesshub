@@ -110,7 +110,7 @@ const TrainersPage = () => {
                 id="search"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
                 placeholder="Enter trainer name"
               />
             </div>
@@ -124,7 +124,7 @@ const TrainersPage = () => {
                 id="type"
                 value={type || "All Types"}
                 onChange={(e) => setType(e.target.value === "All Types" ? "" : e.target.value)}
-                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"
               >
                 {availableTypes.map((t) => (
                   <option key={t} value={t}>
