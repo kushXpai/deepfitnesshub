@@ -45,7 +45,7 @@ export default function FitnessCalculators() {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {calculators.map((calculator, index) => (
             <Link key={index} href="/calculators">
               <div className="bg-white border border-gray-200 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300 hover:border-purple-300 cursor-pointer">
