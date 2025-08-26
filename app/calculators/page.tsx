@@ -163,18 +163,18 @@ export default function CalculatorsPage() {
     switch (activeTab) {
       case "BMI":
         return (
-          <div className="bg-white">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
               Body Mass Index (BMI) Calculator
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
               BMI is a measure of body fat based on height and weight that applies to adult men and women.
             </p>
             
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">Gender</label>
-                <div className="flex space-x-6">
+                <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
                   <label className="flex items-center">
                     <input
                       type="radio"
@@ -205,11 +205,11 @@ export default function CalculatorsPage() {
                   placeholder="Enter age"
                   value={bmiData.age}
                   onChange={(e) => setBmiData({...bmiData, age: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Weight (Kg)</label>
                   <input
@@ -217,7 +217,7 @@ export default function CalculatorsPage() {
                     placeholder="Enter weight"
                     value={bmiData.weight}
                     onChange={(e) => setBmiData({...bmiData, weight: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -227,14 +227,14 @@ export default function CalculatorsPage() {
                     placeholder="Enter Height"
                     value={bmiData.height}
                     onChange={(e) => setBmiData({...bmiData, height: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
               </div>
 
               <button
                 onClick={calculateBMI}
-                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
+                className="w-full sm:w-auto bg-purple-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors text-sm sm:text-base"
               >
                 Calculate BMI
               </button>
@@ -244,18 +244,18 @@ export default function CalculatorsPage() {
 
       case "BMR":
         return (
-          <div className="bg-white">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
               Basal Metabolic Rate (BMR) Calculator
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
               BMR is the number of calories your body needs to maintain basic functions at rest.
             </p>
             
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">Gender</label>
-                <div className="flex space-x-6">
+                <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
                   <label className="flex items-center">
                     <input
                       type="radio"
@@ -286,11 +286,11 @@ export default function CalculatorsPage() {
                   placeholder="Enter age"
                   value={bmrData.age}
                   onChange={(e) => setBmrData({...bmrData, age: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Weight (Kg)</label>
                   <input
@@ -298,7 +298,7 @@ export default function CalculatorsPage() {
                     placeholder="Enter weight"
                     value={bmrData.weight}
                     onChange={(e) => setBmrData({...bmrData, weight: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -308,14 +308,14 @@ export default function CalculatorsPage() {
                     placeholder="Enter Height"
                     value={bmrData.height}
                     onChange={(e) => setBmrData({...bmrData, height: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
               </div>
 
               <button
                 onClick={calculateBMR}
-                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
+                className="w-full sm:w-auto bg-purple-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors text-sm sm:text-base"
               >
                 Calculate BMR
               </button>
@@ -325,18 +325,18 @@ export default function CalculatorsPage() {
 
       case "Calorie Needs":
         return (
-          <div className="bg-white">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
               Daily Calorie Calculator
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
               Calculate your daily calorie needs based on your basal metabolic rate and activity level.
             </p>
             
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">Gender</label>
-                <div className="flex space-x-6">
+                <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
                   <label className="flex items-center">
                     <input
                       type="radio"
@@ -367,11 +367,11 @@ export default function CalculatorsPage() {
                   placeholder="Enter age"
                   value={calorieData.age}
                   onChange={(e) => setCalorieData({...calorieData, age: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Weight (Kg)</label>
                   <input
@@ -379,7 +379,7 @@ export default function CalculatorsPage() {
                     placeholder="Enter weight"
                     value={calorieData.weight}
                     onChange={(e) => setCalorieData({...calorieData, weight: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
                 <div>
@@ -389,7 +389,7 @@ export default function CalculatorsPage() {
                     placeholder="Enter Height"
                     value={calorieData.height}
                     onChange={(e) => setCalorieData({...calorieData, height: e.target.value})}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -399,7 +399,7 @@ export default function CalculatorsPage() {
                 <select
                   value={calorieData.activity}
                   onChange={(e) => setCalorieData({...calorieData, activity: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white"
                 >
                   {activityLevels.map((level) => (
                     <option key={level} value={level}>{level}</option>
@@ -409,7 +409,7 @@ export default function CalculatorsPage() {
 
               <button
                 onClick={calculateCalories}
-                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
+                className="w-full sm:w-auto bg-purple-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors text-sm sm:text-base"
               >
                 Calculate Calories
               </button>
@@ -419,18 +419,18 @@ export default function CalculatorsPage() {
 
       case "Ideal Weight":
         return (
-          <div className="bg-white">
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+          <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4">
               Ideal Weight Calculator
             </h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">
               Calculate your ideal weight range based on your height and gender using the healthy BMI range.
             </p>
             
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-3">Gender</label>
-                <div className="flex space-x-6">
+                <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
                   <label className="flex items-center">
                     <input
                       type="radio"
@@ -461,13 +461,13 @@ export default function CalculatorsPage() {
                   placeholder="Enter Height"
                   value={idealWeightData.height}
                   onChange={(e) => setIdealWeightData({...idealWeightData, height: e.target.value})}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
               </div>
 
               <button
                 onClick={calculateIdealWeight}
-                className="bg-purple-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors"
+                className="w-full sm:w-auto bg-purple-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors text-sm sm:text-base"
               >
                 Calculate Ideal Weight
               </button>
@@ -484,68 +484,68 @@ export default function CalculatorsPage() {
     if (!results) return null;
 
     return (
-      <div className="mt-8 p-6 bg-gray-50 rounded-lg">
-        <h3 className="text-xl font-semibold text-gray-800 mb-4">Results</h3>
+      <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gray-50 rounded-lg">
+        <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Results</h3>
         
         {results.type === "BMI" && (
-          <div className="space-y-3">
-            <div className="text-3xl font-bold text-purple-600">
+          <div className="space-y-2 sm:space-y-3">
+            <div className="text-2xl sm:text-3xl font-bold text-purple-600 break-words">
               BMI: {results.value}
             </div>
-            <div className="text-lg font-medium text-gray-700">
+            <div className="text-base sm:text-lg font-medium text-gray-700 break-words">
               Category: {results.category}
             </div>
-            <p className="text-gray-600">{results.details}</p>
+            <p className="text-gray-600 text-sm sm:text-base break-words">{results.details}</p>
           </div>
         )}
 
         {results.type === "BMR" && (
-          <div className="space-y-3">
-            <div className="text-3xl font-bold text-purple-600">
+          <div className="space-y-2 sm:space-y-3">
+            <div className="text-2xl sm:text-3xl font-bold text-purple-600 break-words">
               {results.value} calories/day
             </div>
-            <p className="text-gray-600">{results.details}</p>
+            <p className="text-gray-600 text-sm sm:text-base break-words">{results.details}</p>
           </div>
         )}
 
         {results.type === "Calories" && (
-          <div className="space-y-4">
-            <div className="text-3xl font-bold text-purple-600">
+          <div className="space-y-3 sm:space-y-4">
+            <div className="text-2xl sm:text-3xl font-bold text-purple-600 break-words">
               {results.value} calories/day
             </div>
-            <p className="text-gray-600">{results.details}</p>
+            <p className="text-gray-600 text-sm sm:text-base break-words">{results.details}</p>
             
             {results.breakdown && (
-              <div className="mt-6">
-                <h4 className="font-semibold text-gray-800 mb-3">Calorie Goals:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                  <div className="flex justify-between">
-                    <span>Extreme weight loss:</span>
-                    <span className="font-medium">{results.breakdown.extremeLoss} cal/day</span>
+              <div className="mt-4 sm:mt-6">
+                <h4 className="font-semibold text-gray-800 mb-3 text-sm sm:text-base">Calorie Goals:</h4>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-4 text-xs sm:text-sm">
+                  <div className="flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0">
+                    <span className="pr-2 break-words">Extreme weight loss:</span>
+                    <span className="font-medium whitespace-nowrap">{results.breakdown.extremeLoss} cal/day</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Weight loss:</span>
-                    <span className="font-medium">{results.breakdown.weightLoss} cal/day</span>
+                  <div className="flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0">
+                    <span className="pr-2 break-words">Weight loss:</span>
+                    <span className="font-medium whitespace-nowrap">{results.breakdown.weightLoss} cal/day</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Mild weight loss:</span>
-                    <span className="font-medium">{results.breakdown.mildLoss} cal/day</span>
+                  <div className="flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0">
+                    <span className="pr-2 break-words">Mild weight loss:</span>
+                    <span className="font-medium whitespace-nowrap">{results.breakdown.mildLoss} cal/day</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Maintain weight:</span>
-                    <span className="font-medium">{results.breakdown.maintain} cal/day</span>
+                  <div className="flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0">
+                    <span className="pr-2 break-words">Maintain weight:</span>
+                    <span className="font-medium whitespace-nowrap">{results.breakdown.maintain} cal/day</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Mild weight gain:</span>
-                    <span className="font-medium">{results.breakdown.mildGain} cal/day</span>
+                  <div className="flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0">
+                    <span className="pr-2 break-words">Mild weight gain:</span>
+                    <span className="font-medium whitespace-nowrap">{results.breakdown.mildGain} cal/day</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Weight gain:</span>
-                    <span className="font-medium">{results.breakdown.weightGain} cal/day</span>
+                  <div className="flex justify-between items-center py-1 border-b border-gray-200 last:border-b-0">
+                    <span className="pr-2 break-words">Weight gain:</span>
+                    <span className="font-medium whitespace-nowrap">{results.breakdown.weightGain} cal/day</span>
                   </div>
-                  <div className="flex justify-between">
-                    <span>Fast weight gain:</span>
-                    <span className="font-medium">{results.breakdown.fastGain} cal/day</span>
+                  <div className="flex justify-between items-center py-1">
+                    <span className="pr-2 break-words">Fast weight gain:</span>
+                    <span className="font-medium whitespace-nowrap">{results.breakdown.fastGain} cal/day</span>
                   </div>
                 </div>
               </div>
@@ -554,17 +554,17 @@ export default function CalculatorsPage() {
         )}
 
         {results.type === "Ideal Weight" && (
-          <div className="space-y-3">
-            <div className="text-3xl font-bold text-purple-600">
+          <div className="space-y-2 sm:space-y-3">
+            <div className="text-2xl sm:text-3xl font-bold text-purple-600 break-words">
               {results.range} kg
             </div>
-            <p className="text-gray-600">{results.details}</p>
+            <p className="text-gray-600 text-sm sm:text-base break-words">{results.details}</p>
           </div>
         )}
 
         <button
           onClick={resetForm}
-          className="mt-4 bg-gray-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-gray-700 transition-colors"
+          className="mt-3 sm:mt-4 w-full sm:w-auto bg-gray-600 text-white px-4 sm:px-6 py-2 rounded-lg font-medium hover:bg-gray-700 transition-colors text-sm sm:text-base"
         >
           Calculate Again
         </button>
@@ -574,30 +574,32 @@ export default function CalculatorsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 text-black">
-      <div className="max-w-6xl mx-auto px-6 py-8">
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-800 mb-2">Calculators</h1>
-          <p className="text-gray-600">Track your health metrics with our simple calculators</p>
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 py-4 sm:py-8">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Calculators</h1>
+          <p className="text-gray-600 text-sm sm:text-base">Track your health metrics with our simple calculators</p>
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex space-x-0 mb-8 border-b">
-          {["BMI Calculator", "BMR Calculator", "Calorie Needs", "Ideal Weight"].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => {
-                setActiveTab(tab.split(" ")[0] === "BMI" ? "BMI" : tab.split(" ")[0] === "BMR" ? "BMR" : tab === "Calorie Needs" ? "Calorie Needs" : "Ideal Weight");
-                setResults(null);
-              }}
-              className={`px-6 py-3 font-medium transition-colors border-b-2 ${
-                activeTab === (tab.split(" ")[0] === "BMI" ? "BMI" : tab.split(" ")[0] === "BMR" ? "BMR" : tab === "Calorie Needs" ? "Calorie Needs" : "Ideal Weight")
-                  ? "text-purple-600 border-purple-600 bg-white"
-                  : "text-gray-600 border-transparent bg-gray-200 hover:text-purple-600"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
+        <div className="mb-6 sm:mb-8 border-b overflow-x-auto">
+          <div className="flex min-w-max sm:min-w-0">
+            {["BMI Calculator", "BMR Calculator", "Calorie Needs", "Ideal Weight"].map((tab) => (
+              <button
+                key={tab}
+                onClick={() => {
+                  setActiveTab(tab.split(" ")[0] === "BMI" ? "BMI" : tab.split(" ")[0] === "BMR" ? "BMR" : tab === "Calorie Needs" ? "Calorie Needs" : "Ideal Weight");
+                  setResults(null);
+                }}
+                className={`px-3 sm:px-6 py-2 sm:py-3 font-medium transition-colors border-b-2 whitespace-nowrap text-sm sm:text-base flex-shrink-0 ${
+                  activeTab === (tab.split(" ")[0] === "BMI" ? "BMI" : tab.split(" ")[0] === "BMR" ? "BMR" : tab === "Calorie Needs" ? "Calorie Needs" : "Ideal Weight")
+                    ? "text-purple-600 border-purple-600 bg-white"
+                    : "text-gray-600 border-transparent bg-gray-200 hover:text-purple-600"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Tab Content */}
