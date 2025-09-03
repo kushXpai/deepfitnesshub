@@ -55,53 +55,69 @@ export default function AddTrainerPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-6">
-      <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-2xl p-8">
-        <h1 className="text-2xl font-bold text-purple-700 mb-6">
-          ➕ Add New Trainer
-        </h1>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          {Object.entries(form).map(([key, value]) => (
-            <div key={key}>
-              <label
-                className="block text-sm font-medium text-gray-700 capitalize"
-                htmlFor={key}
-              >
-                {key.replace("_", " ")}
-              </label>
-              {key === "caption_snippet" ? (
-                <textarea
-                  id={key}
-                  name={key}
-                  value={value}
-                  onChange={handleChange}
-                  className="w-full text-black border-gray-300 rounded-lg p-2 hover:border-purple-500 focus:ring-purple-500 focus:border-purple-500"
-                  rows={3}
-                />
-              ) : (
-                <input
-                  type="text"
-                  id={key}
-                  name={key}
-                  value={value}
-                  onChange={handleChange}
-                  className="w-full text-black border-gray-700 rounded-lg p-2 hover:border-purple-500 focus:ring-purple-500 focus:border-purple-500"
-                />
-              )}
-            </div>
-          ))}
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md"
-          >
-            {loading ? "Saving..." : "Add Trainer"}
-          </button>
-        </form>
-        {message && (
-          <p className="mt-4 text-center text-sm font-medium text-gray-700">
-            {message}
+      <div className="max-w-3xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-purple-600 to-purple-800 px-8 py-6">
+          <h1 className="text-3xl font-bold text-white">➕ Add New Trainer</h1>
+          <p className="text-purple-100 mt-2 text-sm">
+            Fill in the details below to add a trainer to the database.
           </p>
-        )}
+        </div>
+
+        {/* Form */}
+        <div className="p-8">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            {Object.entries(form).map(([key, value]) => (
+              <div key={key}>
+                <label
+                  className="block text-sm font-semibold text-gray-700 mb-1 capitalize"
+                  htmlFor={key}
+                >
+                  {key.replace("_", " ")}
+                </label>
+                {key === "caption_snippet" ? (
+                  <textarea
+                    id={key}
+                    name={key}
+                    value={value}
+                    onChange={handleChange}
+                    className="w-full text-black border border-gray-300 rounded-lg px-4 py-3 
+                               focus:ring-2 focus:ring-purple-500 focus:border-purple-500 
+                               hover:border-purple-400 transition-all shadow-sm"
+                    rows={3}
+                  />
+                ) : (
+                  <input
+                    type="text"
+                    id={key}
+                    name={key}
+                    value={value}
+                    onChange={handleChange}
+                    className="w-full text-black border border-gray-300 rounded-lg px-4 py-3 
+                               focus:ring-2 focus:ring-purple-500 focus:border-purple-500 
+                               hover:border-purple-400 transition-all shadow-sm"
+                  />
+                )}
+              </div>
+            ))}
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-gradient-to-r from-purple-600 to-purple-700 
+                         hover:from-purple-700 hover:to-purple-800 text-white 
+                         font-semibold py-3 px-4 rounded-lg shadow-md transition-all"
+            >
+              {loading ? "Saving..." : "Add Trainer"}
+            </button>
+          </form>
+
+          {message && (
+            <p className="mt-6 text-center text-sm font-medium text-gray-700">
+              {message}
+            </p>
+          )}
+        </div>
       </div>
     </div>
   );
